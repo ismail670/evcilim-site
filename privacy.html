@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gizlilik Politikası — Evcilim</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:#FAFAFA; color:#1A1A1A; line-height:1.7; padding:0 0 60px; }
+  .header { background:linear-gradient(135deg,#FF6B9D,#8B5CF6); color:#fff;
+    padding:48px 24px 56px; text-align:center; position:relative; }
+  .lang-switch { position:absolute; top:16px; right:16px; display:flex; gap:4px;
+    background:rgba(255,255,255,0.2); border-radius:10px; padding:4px; }
+  .lang-switch button { border:none; background:transparent; color:#fff; font-weight:700;
+    font-size:13px; padding:6px 12px; border-radius:7px; cursor:pointer; }
+  .lang-switch button.active { background:#fff; color:#8B5CF6; }
+  .header .emoji { font-size:48px; margin-bottom:12px; }
+  .header h1 { font-size:28px; font-weight:800; margin-bottom:8px; }
+  .header p { font-size:15px; opacity:0.95; max-width:600px; margin:0 auto; }
+  .header .updated { font-size:12px; opacity:0.8; margin-top:12px; }
+  .nav { display:flex; gap:12px; justify-content:center; margin:16px auto 32px;
+    max-width:760px; padding:0 24px; }
+  .nav a { flex:1; text-align:center; padding:14px; border-radius:12px; background:#fff;
+    color:#8B5CF6; text-decoration:none; font-weight:700; font-size:13px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08); border:2px solid transparent; }
+  .nav a.active { border-color:#8B5CF6; }
+  .container { max-width:760px; margin:0 auto; padding:8px 24px; }
+  section { background:#fff; border-radius:16px; padding:24px; margin-bottom:16px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+  section h2 { font-size:19px; font-weight:800; color:#8B5CF6; margin-bottom:14px; }
+  section p { margin-bottom:12px; color:#3A3A3A; font-size:15px; }
+  section ul { margin:8px 0 8px 8px; list-style:none; }
+  section li { padding:7px 0 7px 26px; position:relative; color:#3A3A3A; font-size:14.5px; }
+  section li::before { content:"✓"; position:absolute; left:0; color:#22C55E; font-weight:900; }
+  .footer { text-align:center; padding:32px 24px; color:#888; font-size:13px; }
+  .footer a { color:#8B5CF6; text-decoration:none; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="lang-switch">
+      <button id="btnTr" class="active" onclick="setLang('tr')">TR</button>
+      <button id="btnEn" onclick="setLang('en')">EN</button>
+    </div>
+    <div class="emoji">🔐</div>
+    <h1 id="docTitle">Gizlilik Politikası</h1>
+    <p id="docSubtitle">KVKK ve GDPR uyumlu olarak kişisel verilerinizin nasıl işlendiğini açıklar</p>
+    <div class="updated"><span id="updatedLabel">Son güncelleme</span>: <span id="docUpdated">15 Ocak 2026</span></div>
+  </div>
+  <div class="nav">
+    <a href="index.html" id="navHome">🏠 Ana Sayfa</a>
+    <a href="privacy.html" id="navPrivacy" class="active">🔐 Gizlilik</a>
+    <a href="terms.html" id="navTerms" class="">📋 Koşullar</a>
+  </div>
+  <div class="container" id="content"><section><h2>Topladığımız Veriler</h2><p>Evcilim olarak, Türkiye ve Azerbaycan kullanıcılarına evcil hayvan platformu hizmeti sunuyoruz. Hizmetlerimizi sağlayabilmek için aşağıdaki kişisel verilerinizi topluyoruz:</p><ul><li>Hesap Bilgileri: Ad, e-posta adresi, telefon numarası (+90 / +994), şifre (şifrelenmiş olarak)</li><li>Profil Bilgileri: Profil fotoğrafı, biyografi, şehir, ilçe, doğum tarihi (opsiyonel)</li><li>Hayvan Bilgileri: Tür, cins, yaş, cinsiyet, kısırlaştırma durumu, aşı durumu, davranış özellikleri, fotoğraflar</li><li>Konum Verileri: Şehir/ilçe seviyesinde (GPS koordinatları opsiyonel, kullanıcı izniyle)</li><li>İletişim Verileri: Mesaj içerikleri, sesli/görüntülü arama metadata (içerik DEĞİL)</li><li>Cihaz Bilgileri: Cihaz modeli, işletim sistemi, FCM token (push bildirim için)</li><li>Kullanım Verileri: Eşleşme tercihleri, gönderilen istekler, beğeniler, arama geçmişi</li></ul></section><section><h2>Verileri Kullanma Amaçları</h2><p>Topladığımız verileri yalnızca aşağıdaki amaçlar için kullanırız:</p><ul><li>Hesap oluşturma, doğrulama ve yönetimi</li><li>AI destekli akıllı eşleştirme algoritmaları (Çiftleşme, Arkadaşlık, Yakındaki)</li><li>Sahiplendirme ilanlarının yönetimi ve filtrelenmesi</li><li>Kullanıcılar arası mesajlaşma ve sesli/görüntülü arama</li><li>Push bildirim gönderimi (eşleşme, mesaj, arama vb.)</li><li>Premium üyelik (Plus, Pro) yönetimi ve fatura işlemleri</li><li>Topluluk güvenliği (rapor, engelleme, içerik moderasyonu)</li><li>Hizmet kalitesini artırma (hata raporu, performans analizi)</li><li>Yasal yükümlülükleri yerine getirme</li></ul></section><section><h2>Verilerin Paylaşılması</h2><p>Kişisel verileriniz HİÇBİR koşulda satılmaz. Sadece aşağıdaki durumlarda 3. taraflarla paylaşılır:</p><ul><li>Firebase (Google) — Veri tabanı, kimlik doğrulama, push bildirim altyapısı</li><li>Cloudinary — Fotoğraf yükleme ve barındırma</li><li>Apple App Store / Google Play — Premium ödeme işlemleri</li><li>Sesli/görüntülü arama altyapısı — peer-to-peer, içerik kayıt edilmez</li><li>Yasal otoriteler — Mahkeme kararıyla zorunlu olduğunda</li><li>Diğer kullanıcılar — Yalnızca kendi tercih ettiğiniz görünürlük seviyesinde</li></ul></section><section><h2>Veri Güvenliği</h2><p>Verileriniz endüstri standardı güvenlik önlemleriyle korunur:</p><ul><li>Tüm veriler HTTPS/TLS ile şifrelenir</li><li>Şifreler geri çevrilemez şekilde hashlenmiş olarak saklanır</li><li>Mesajlar Firebase Firestore üzerinde güvenli şekilde depolanır</li><li>Sesli/görüntülü aramalar peer-to-peer (server üzerinde içerik geçmez)</li><li>Düzenli güvenlik denetimleri yapılır</li><li>Veri ihlali durumunda yasal süre içinde bilgilendirme</li></ul></section><section><h2>Kullanıcı Hakları (KVKK Madde 11 / GDPR Madde 15-22)</h2><p>Türkiye&#x27;de KVKK ve Azerbaycan/AB için GDPR kapsamında aşağıdaki haklara sahipsiniz:</p><ul><li>Verilerinize erişim talep etme (ücretsiz, 30 gün içinde yanıt)</li><li>Verilerinizin düzeltilmesini isteme</li><li>Hesabınızı ve tüm verilerinizi silme (Right to be Forgotten)</li><li>Veri taşınabilirliği (verilerinizi indirebilirsiniz)</li><li>İşlemeye itiraz etme</li><li>Otomatik karar vermeye (AI eşleştirme dahil) itiraz etme</li><li>KVKK Kurulu (Türkiye) veya yetkili otoriteye şikayet hakkı</li></ul></section><section><h2>Çocuk Koruma</h2><p>Evcilim 18 yaş ve üzeri kullanıcılara yöneliktir. 18 yaş altı kişilerden kasıtlı olarak veri toplamayız. Eğer 18 yaş altı bir kullanıcının veri verdiğini fark edersek, hesabı derhal silinir ve verileri yok edilir.</p><p>Velayet sahipleri çocuklarının verilerinin işlenmediğini düşünüyorsa destek@evcilim.com adresinden bize ulaşabilirler.</p></section><section><h2>Veri Saklama Süreleri</h2><p>Verilerinizi yalnızca gerekli olduğu sürece saklarız:</p><ul><li>Aktif hesap verileri: Hesap aktif olduğu süre boyunca</li><li>Mesajlar: 2 yıl sonra otomatik silinir (kullanıcı talebi olursa daha erken)</li><li>Çağrı kayıtları (metadata): 30 gün</li><li>Hesap silindikten sonra: 30 gün geri alma süresi, sonra kalıcı silme</li><li>Yasal zorunluluk gerektiren veriler (fatura vb.): 10 yıl (Türkiye Vergi Kanunu)</li></ul></section><section><h2>İletişim &amp; Veri Sorumlusu</h2><p>Bu politika hakkındaki sorularınız için: destek@evcilim.com</p><p>KVKK Veri Sorumlusu Sicili (VERBİS) kayıt numaramız uygulama içerisinden talep edilebilir.</p><p>Bu politika değiştiğinde uygulama içerisinden bildirim alacaksınız ve kullanmaya devam etmek güncellenmiş şartları kabul anlamına gelir.</p></section></div>
+  <div class="footer">
+    <p id="footerText">Evcilim — Türkiye & Azerbaycan Evcil Hayvan Platformu</p>
+    <p style="margin-top:8px;"><span id="contactLabel">İletişim</span>: <a href="mailto:destek@evcilim.app">destek@evcilim.app</a></p>
+  </div>
+
+<script>
+const DATA = {
+  tr: {
+    title: "Gizlilik Politikası",
+    subtitle: "KVKK ve GDPR uyumlu olarak kişisel verilerinizin nasıl işlendiğini açıklar",
+    updated: "15 Ocak 2026",
+    sections: [{"title": "Topladığımız Veriler", "paragraphs": ["Evcilim olarak, Türkiye ve Azerbaycan kullanıcılarına evcil hayvan platformu hizmeti sunuyoruz. Hizmetlerimizi sağlayabilmek için aşağıdaki kişisel verilerinizi topluyoruz:"], "bullets": ["Hesap Bilgileri: Ad, e-posta adresi, telefon numarası (+90 / +994), şifre (şifrelenmiş olarak)", "Profil Bilgileri: Profil fotoğrafı, biyografi, şehir, ilçe, doğum tarihi (opsiyonel)", "Hayvan Bilgileri: Tür, cins, yaş, cinsiyet, kısırlaştırma durumu, aşı durumu, davranış özellikleri, fotoğraflar", "Konum Verileri: Şehir/ilçe seviyesinde (GPS koordinatları opsiyonel, kullanıcı izniyle)", "İletişim Verileri: Mesaj içerikleri, sesli/görüntülü arama metadata (içerik DEĞİL)", "Cihaz Bilgileri: Cihaz modeli, işletim sistemi, FCM token (push bildirim için)", "Kullanım Verileri: Eşleşme tercihleri, gönderilen istekler, beğeniler, arama geçmişi"]}, {"title": "Verileri Kullanma Amaçları", "paragraphs": ["Topladığımız verileri yalnızca aşağıdaki amaçlar için kullanırız:"], "bullets": ["Hesap oluşturma, doğrulama ve yönetimi", "AI destekli akıllı eşleştirme algoritmaları (Çiftleşme, Arkadaşlık, Yakındaki)", "Sahiplendirme ilanlarının yönetimi ve filtrelenmesi", "Kullanıcılar arası mesajlaşma ve sesli/görüntülü arama", "Push bildirim gönderimi (eşleşme, mesaj, arama vb.)", "Premium üyelik (Plus, Pro) yönetimi ve fatura işlemleri", "Topluluk güvenliği (rapor, engelleme, içerik moderasyonu)", "Hizmet kalitesini artırma (hata raporu, performans analizi)", "Yasal yükümlülükleri yerine getirme"]}, {"title": "Verilerin Paylaşılması", "paragraphs": ["Kişisel verileriniz HİÇBİR koşulda satılmaz. Sadece aşağıdaki durumlarda 3. taraflarla paylaşılır:"], "bullets": ["Firebase (Google) — Veri tabanı, kimlik doğrulama, push bildirim altyapısı", "Cloudinary — Fotoğraf yükleme ve barındırma", "Apple App Store / Google Play — Premium ödeme işlemleri", "Sesli/görüntülü arama altyapısı — peer-to-peer, içerik kayıt edilmez", "Yasal otoriteler — Mahkeme kararıyla zorunlu olduğunda", "Diğer kullanıcılar — Yalnızca kendi tercih ettiğiniz görünürlük seviyesinde"]}, {"title": "Veri Güvenliği", "paragraphs": ["Verileriniz endüstri standardı güvenlik önlemleriyle korunur:"], "bullets": ["Tüm veriler HTTPS/TLS ile şifrelenir", "Şifreler geri çevrilemez şekilde hashlenmiş olarak saklanır", "Mesajlar Firebase Firestore üzerinde güvenli şekilde depolanır", "Sesli/görüntülü aramalar peer-to-peer (server üzerinde içerik geçmez)", "Düzenli güvenlik denetimleri yapılır", "Veri ihlali durumunda yasal süre içinde bilgilendirme"]}, {"title": "Kullanıcı Hakları (KVKK Madde 11 / GDPR Madde 15-22)", "paragraphs": ["Türkiye'de KVKK ve Azerbaycan/AB için GDPR kapsamında aşağıdaki haklara sahipsiniz:"], "bullets": ["Verilerinize erişim talep etme (ücretsiz, 30 gün içinde yanıt)", "Verilerinizin düzeltilmesini isteme", "Hesabınızı ve tüm verilerinizi silme (Right to be Forgotten)", "Veri taşınabilirliği (verilerinizi indirebilirsiniz)", "İşlemeye itiraz etme", "Otomatik karar vermeye (AI eşleştirme dahil) itiraz etme", "KVKK Kurulu (Türkiye) veya yetkili otoriteye şikayet hakkı"]}, {"title": "Çocuk Koruma", "paragraphs": ["Evcilim 18 yaş ve üzeri kullanıcılara yöneliktir. 18 yaş altı kişilerden kasıtlı olarak veri toplamayız. Eğer 18 yaş altı bir kullanıcının veri verdiğini fark edersek, hesabı derhal silinir ve verileri yok edilir.", "Velayet sahipleri çocuklarının verilerinin işlenmediğini düşünüyorsa destek@evcilim.com adresinden bize ulaşabilirler."], "bullets": []}, {"title": "Veri Saklama Süreleri", "paragraphs": ["Verilerinizi yalnızca gerekli olduğu sürece saklarız:"], "bullets": ["Aktif hesap verileri: Hesap aktif olduğu süre boyunca", "Mesajlar: 2 yıl sonra otomatik silinir (kullanıcı talebi olursa daha erken)", "Çağrı kayıtları (metadata): 30 gün", "Hesap silindikten sonra: 30 gün geri alma süresi, sonra kalıcı silme", "Yasal zorunluluk gerektiren veriler (fatura vb.): 10 yıl (Türkiye Vergi Kanunu)"]}, {"title": "İletişim & Veri Sorumlusu", "paragraphs": ["Bu politika hakkındaki sorularınız için: destek@evcilim.com", "KVKK Veri Sorumlusu Sicili (VERBİS) kayıt numaramız uygulama içerisinden talep edilebilir.", "Bu politika değiştiğinde uygulama içerisinden bildirim alacaksınız ve kullanmaya devam etmek güncellenmiş şartları kabul anlamına gelir."], "bullets": []}],
+    ui: {"home": "🏠 Ana Sayfa", "privacy": "🔐 Gizlilik", "terms": "📋 Koşullar", "updated": "Son güncelleme", "contact": "İletişim", "footer": "Türkiye & Azerbaycan Evcil Hayvan Platformu"}
+  },
+  en: {
+    title: "Privacy Policy",
+    subtitle: "Explains how your personal data is processed in compliance with GDPR and KVKK",
+    updated: "January 15, 2026",
+    sections: [{"title": "Data We Collect", "paragraphs": ["As Evcilim, we provide a pet platform service to users in Turkey and Azerbaijan. To deliver our services, we collect the following personal data:"], "bullets": ["Account Information: Name, email address, phone number (+90 / +994), password (stored encrypted)", "Profile Information: Profile photo, biography, city, district, date of birth (optional)", "Pet Information: Species, breed, age, gender, neutering status, vaccination status, behavioral traits, photos", "Location Data: At city/district level (GPS coordinates optional, with user consent)", "Communication Data: Message content, voice/video call metadata (NOT content)", "Device Information: Device model, operating system, FCM token (for push notifications)", "Usage Data: Match preferences, sent requests, likes, search history"]}, {"title": "Purposes of Data Use", "paragraphs": ["We use the data we collect only for the following purposes:"], "bullets": ["Account creation, verification and management", "AI-powered smart matching algorithms (Mating, Friendship, Nearby)", "Management and filtering of adoption listings", "Messaging and voice/video calls between users", "Sending push notifications (matches, messages, calls, etc.)", "Premium membership (Plus, Pro) management and billing", "Community safety (reporting, blocking, content moderation)", "Improving service quality (error reports, performance analysis)", "Fulfilling legal obligations"]}, {"title": "Data Sharing", "paragraphs": ["Your personal data is NEVER sold under any circumstances. It is only shared with third parties in the following cases:"], "bullets": ["Firebase (Google) — Database, authentication, push notification infrastructure", "Cloudinary — Photo upload and hosting", "Apple App Store / Google Play — Premium payment processing", "Voice/video call infrastructure — peer-to-peer, content is not recorded", "Legal authorities — When required by court order", "Other users — Only at the visibility level you choose"]}, {"title": "Data Security", "paragraphs": ["Your data is protected with industry-standard security measures:"], "bullets": ["All data is encrypted with HTTPS/TLS", "Passwords are stored as irreversible hashes", "Messages are securely stored on Firebase Firestore", "Voice/video calls are peer-to-peer (content does not pass through servers)", "Regular security audits are performed", "Notification within the legal timeframe in case of a data breach"]}, {"title": "User Rights (KVKK Art. 11 / GDPR Art. 15-22)", "paragraphs": ["Under KVKK in Turkey and GDPR for Azerbaijan/EU, you have the following rights:"], "bullets": ["Request access to your data (free, response within 30 days)", "Request correction of your data", "Delete your account and all your data (Right to be Forgotten)", "Data portability (you can download your data)", "Object to processing", "Object to automated decision-making (including AI matching)", "Right to complain to the KVKK Authority (Turkey) or the relevant authority"]}, {"title": "Child Protection", "paragraphs": ["Evcilim is intended for users aged 18 and over. We do not knowingly collect data from individuals under 18. If we discover that a user under 18 has provided data, the account is immediately deleted and the data destroyed.", "Guardians who believe their child’s data is being processed may contact us at destek@evcilim.com."], "bullets": []}, {"title": "Data Retention Periods", "paragraphs": ["We retain your data only as long as necessary:"], "bullets": ["Active account data: For as long as the account is active", "Messages: Automatically deleted after 2 years (earlier upon user request)", "Call records (metadata): 30 days", "After account deletion: 30-day recovery period, then permanent deletion", "Data required by law (invoices, etc.): 10 years (Turkish Tax Law)"]}, {"title": "Contact & Data Controller", "paragraphs": ["For questions about this policy: destek@evcilim.com", "Our KVKK Data Controller Registry (VERBIS) registration number can be requested from within the app.", "When this policy changes, you will be notified within the app, and continued use means acceptance of the updated terms."], "bullets": []}],
+    ui: {"home": "🏠 Home", "privacy": "🔐 Privacy", "terms": "📋 Terms", "updated": "Last updated", "contact": "Contact", "footer": "Turkey & Azerbaijan Pet Platform"}
+  }
+};
+const DOC_KEY = "privacy";
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+function renderSections(secs){
+  return secs.map(s=>{
+    const paras = s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('');
+    const bullets = s.bullets && s.bullets.length ? `<ul>${s.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>` : '';
+    return `<section><h2>${esc(s.title)}</h2>${paras}${bullets}</section>`;
+  }).join('');
+}
+function setLang(lang){
+  const d = DATA[lang];
+  document.getElementById('htmlRoot').lang = lang;
+  document.getElementById('docTitle').textContent = d.title;
+  document.getElementById('docSubtitle').textContent = d.subtitle;
+  document.getElementById('updatedLabel').textContent = d.ui.updated;
+  document.getElementById('docUpdated').textContent = d.updated;
+  document.getElementById('navHome').textContent = d.ui.home;
+  document.getElementById('navPrivacy').textContent = d.ui.privacy;
+  document.getElementById('navTerms').textContent = d.ui.terms;
+  document.getElementById('content').innerHTML = renderSections(d.sections);
+  document.getElementById('footerText').textContent = 'Evcilim — ' + d.ui.footer;
+  document.getElementById('contactLabel').textContent = d.ui.contact;
+  document.getElementById('btnTr').classList.toggle('active', lang==='tr');
+  document.getElementById('btnEn').classList.toggle('active', lang==='en');
+}
+</script>
+</body>
+</html>

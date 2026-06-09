@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evcilim</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:#FAFAFA; color:#1A1A1A; overflow-x:hidden; }
+  nav { display:flex; align-items:center; justify-content:space-between;
+    padding:22px 24px; max-width:1100px; margin:0 auto; }
+  .logo { font-size:22px; font-weight:900; display:flex; align-items:center; gap:8px; }
+  .logo .paw { font-size:26px; }
+  nav .links { display:flex; gap:24px; align-items:center; }
+  nav .links a { color:#4B453F; text-decoration:none; font-size:14px; font-weight:600; }
+  nav .cta-sm { background:linear-gradient(135deg,#FF6B9D,#8B5CF6); padding:10px 20px;
+    border-radius:12px; color:#fff !important; font-weight:700; }
+  .lang-switch { display:flex; gap:3px; background:rgba(139,92,246,0.1); border-radius:9px; padding:3px; }
+  .lang-switch button { border:none; background:transparent; color:#8A847E; font-weight:700;
+    font-size:12px; padding:5px 10px; border-radius:6px; cursor:pointer; }
+  .lang-switch button.active { background:#8B5CF6; color:#fff; }
+  .hero { text-align:center; padding:70px 24px 50px; position:relative; overflow:hidden; }
+  .hero-blob { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; z-index:0; }
+  .hero-blob.a { width:400px; height:400px; top:-100px; left:-100px; background:rgba(255,107,157,0.18); }
+  .hero-blob.b { width:380px; height:380px; top:-50px; right:-120px; background:rgba(139,92,246,0.15); }
+  .hero-content { position:relative; z-index:1; }
+  .hero .badge { display:inline-block; background:rgba(139,92,246,0.12);
+    border:1px solid rgba(139,92,246,0.3); padding:7px 16px; border-radius:20px;
+    font-size:13px; font-weight:600; margin-bottom:24px; color:#7C3AED; }
+  .hero h1 { font-size:52px; font-weight:900; line-height:1.1; letter-spacing:-1.5px;
+    margin-bottom:20px; max-width:760px; margin-left:auto; margin-right:auto; }
+  .hero h1 .grad { background:linear-gradient(135deg,#FF6B9D,#8B5CF6,#D4AF37);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero p { font-size:18px; color:#4B453F; max-width:560px; margin:0 auto 36px; line-height:1.6; }
+  .store-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .store-btn { display:flex; align-items:center; gap:10px; background:#fff;
+    border:1px solid #EAEAEA; padding:13px 24px; border-radius:14px; text-decoration:none;
+    color:#1A1A1A; transition:transform 0.2s; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+  .store-btn:hover { transform:translateY(-2px); }
+  .store-btn .ico { font-size:26px; }
+  .store-btn .t { text-align:left; }
+  .store-btn .t .s { font-size:10px; color:#8A847E; }
+  .store-btn .t .b { font-size:15px; font-weight:700; }
+  .phone-preview { margin:50px auto 0; width:280px; height:380px; border-radius:36px;
+    background:linear-gradient(160deg,#FFF5F8,#F3E8FF); border:8px solid #fff;
+    position:relative; z-index:1; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; box-shadow:0 30px 80px rgba(139,92,246,0.3); }
+  .phone-preview .big-emoji { font-size:70px; margin-bottom:14px; }
+  .phone-preview .pt { font-size:16px; font-weight:800; color:#1A1A1A; }
+  .phone-preview .ps { font-size:12px; color:#8A847E; margin-top:4px; }
+  .features { padding:70px 24px; }
+  .section-title { text-align:center; margin-bottom:50px; }
+  .section-title h2 { font-size:36px; font-weight:900; letter-spacing:-1px; }
+  .section-title p { color:#8A847E; font-size:16px; margin-top:10px; }
+  .feat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1000px; margin:0 auto; }
+  .feat { background:#fff; border:1px solid #EAEAEA; border-radius:20px; padding:28px; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+  .feat .ico { width:56px; height:56px; border-radius:16px; display:flex; align-items:center;
+    justify-content:center; font-size:28px; margin-bottom:16px;
+    background:linear-gradient(135deg,rgba(255,107,157,0.2),rgba(139,92,246,0.2)); }
+  .feat h3 { font-size:18px; font-weight:800; margin-bottom:8px; }
+  .feat p { font-size:14px; color:#4B453F; line-height:1.6; }
+  .cta-section { text-align:center; padding:80px 24px; margin:40px auto; border-radius:32px;
+    background:linear-gradient(135deg,rgba(255,107,157,0.15),rgba(139,92,246,0.15));
+    border:1px solid rgba(139,92,246,0.3); max-width:1052px; }
+  .cta-section h2 { font-size:38px; font-weight:900; margin-bottom:16px; letter-spacing:-1px; }
+  .cta-section p { color:#4B453F; font-size:17px; margin-bottom:32px; }
+  footer { padding:50px 24px 40px; border-top:1px solid #EAEAEA; margin-top:40px; }
+  .footer-inner { max-width:1000px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+  .footer-inner .col h4 { font-size:14px; margin-bottom:14px; color:#1A1A1A; }
+  .footer-inner .col a { display:block; color:#8A847E; text-decoration:none; font-size:13px; margin-bottom:8px; }
+  .footer-bottom { text-align:center; color:#aaa; font-size:12px; margin-top:32px; }
+  @media (max-width:768px){ .hero h1{font-size:36px;} .feat-grid{grid-template-columns:1fr;}
+    nav .links a:not(.cta-sm):not(.lang-btn){display:none;} }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="paw">🐾</span> Evcilim</div>
+    <div class="links">
+      <a href="#features" id="nFeatures">Özellikler</a>
+      <a href="privacy.html" id="nPrivacy">Gizlilik</a>
+      <div class="lang-switch">
+        <button id="btnTr" class="active" onclick="setLang('tr')">TR</button>
+        <button id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#download" class="cta-sm" id="nDownload">Ücretsiz İndir</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-blob a"></div><div class="hero-blob b"></div>
+    <div class="hero-content">
+      <span class="badge" id="hBadge">🇹🇷 Türkiye & 🇦🇿 Azerbaycan</span>
+      <h1 id="hTitle">Dostuna <span class="grad">yuva bul</span>,<br>yeni dostlar <span class="grad">keşfet</span></h1>
+      <p id="hDesc">Sahiplendirme, eşleştirme, geçici bakım ve daha fazlası. Evcil hayvanların için her şey tek uygulamada.</p>
+      <div class="store-btns" id="download">
+        <a href="#" class="store-btn"><span class="ico">🍎</span><span class="t"><span class="s" id="s1">İndir</span><span class="b">App Store</span></span></a>
+        <a href="#" class="store-btn"><span class="ico">▶️</span><span class="t"><span class="s" id="s2">İndir</span><span class="b">Google Play</span></span></a>
+      </div>
+      <div class="phone-preview">
+        <div class="big-emoji">🐶🐱</div>
+        <div class="pt" id="pMatch">Eşleşme Bulundu!</div>
+        <div class="ps" id="pMatchSub">Leo & Pamuk birbirini beğendi</div>
+      </div>
+    </div>
+  </section>
+  <section class="features" id="features">
+    <div class="section-title"><h2 id="fTitle">Tek uygulama, her şey</h2><p id="fSub">Evcil hayvan dünyan için ihtiyacın olan her şey</p></div>
+    <div class="feat-grid" id="featGrid"></div>
+  </section>
+  <section class="cta-section">
+    <h2 id="ctaTitle">Hemen başla, ücretsiz</h2>
+    <p id="ctaSub">Binlerce hayvansever Evcilim'de buluşuyor. Sen de katıl!</p>
+    <div class="store-btns">
+      <a href="#" class="store-btn"><span class="ico">🍎</span><span class="t"><span class="s">İndir</span><span class="b">App Store</span></span></a>
+      <a href="#" class="store-btn"><span class="ico">▶️</span><span class="t"><span class="s">İndir</span><span class="b">Google Play</span></span></a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="col"><div class="logo" style="margin-bottom:14px;"><span class="paw">🐾</span> Evcilim</div>
+        <p style="color:#8A847E; font-size:13px; max-width:240px;" id="fDesc">Türkiye ve Azerbaycan'ın evcil hayvan platformu.</p></div>
+      <div class="col"><h4 id="fcApp">Uygulama</h4><a href="#features" id="fcFeatures">Özellikler</a><a href="#download" id="fcDownload">İndir</a></div>
+      <div class="col"><h4 id="fcLegal">Yasal</h4><a href="privacy.html" id="fcPrivacy">Gizlilik Politikası</a><a href="terms.html" id="fcTerms">Kullanım Koşulları</a></div>
+      <div class="col"><h4 id="fcContact">İletişim</h4><a href="mailto:destek@evcilim.app">destek@evcilim.app</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Evcilim. <span id="fcRights">Tüm hakları saklıdır.</span></div>
+  </footer>
+<script>
+const T = {
+  tr: {
+    features:'Özellikler', privacy:'Gizlilik', download:'Ücretsiz İndir', dl:'İndir',
+    badge:'🇹🇷 Türkiye & 🇦🇿 Azerbaycan',
+    title:'Dostuna <span class="grad">yuva bul</span>,<br>yeni dostlar <span class="grad">keşfet</span>',
+    desc:'Sahiplendirme, eşleştirme, geçici bakım ve daha fazlası. Evcil hayvanların için her şey tek uygulamada.',
+    match:'Eşleşme Bulundu!', matchSub:'Leo & Pamuk birbirini beğendi',
+    fTitle:'Tek uygulama, her şey', fSub:'Evcil hayvan dünyan için ihtiyacın olan her şey',
+    ctaTitle:'Hemen başla, ücretsiz', ctaSub:'Binlerce hayvansever Evcilim\'de buluşuyor. Sen de katıl!',
+    fDesc:'Türkiye ve Azerbaycan\'ın evcil hayvan platformu.',
+    fcApp:'Uygulama', fcLegal:'Yasal', fcContact:'İletişim', fcRights:'Tüm hakları saklıdır.',
+    feats:[
+      ['🏠','Sahiplendirme','Yuva arayan dostları keşfet, ücretsiz sahiplen. Güvenli ve kolay.'],
+      ['💕','Eşleştirme','Hayvanın için en uygun eşi bul. Kaydır, beğen, eşleş!'],
+      ['🤝','Geçici Bakım','Tatildeyken dostuna güvenilir bakıcı bul veya sen bakıcı ol.'],
+      ['🔍','Kayıp İlanı','Kaybolan dostunu duyur, toplulukla birlikte bul.'],
+      ['🤖','AI Asistan','Sağlık, beslenme, davranış — yapay zeka her sorunu yanıtlar.'],
+      ['💬','Sohbet & Arama','Sesli ve görüntülü arama ile diğer hayvanseverlerle iletişim kur.']
+    ]
+  },
+  en: {
+    features:'Features', privacy:'Privacy', download:'Download Free', dl:'Get it on',
+    badge:'🇹🇷 Turkey & 🇦🇿 Azerbaijan',
+    title:'Find your friend a <span class="grad">home</span>,<br><span class="grad">discover</span> new friends',
+    desc:'Adoption, matching, fostering and more. Everything for your pets in one app.',
+    match:'It\'s a Match!', matchSub:'Leo & Pamuk liked each other',
+    fTitle:'One app, everything', fSub:'Everything you need for your pet world',
+    ctaTitle:'Get started, free', ctaSub:'Thousands of pet lovers meet on Evcilim. Join them!',
+    fDesc:'Turkey and Azerbaijan\'s pet platform.',
+    fcApp:'App', fcLegal:'Legal', fcContact:'Contact', fcRights:'All rights reserved.',
+    feats:[
+      ['🏠','Adoption','Discover pets looking for a home, adopt for free. Safe and easy.'],
+      ['💕','Matching','Find the perfect match for your pet. Swipe, like, match!'],
+      ['🤝','Fostering','Find a trusted sitter for your friend while on vacation, or become one.'],
+      ['🔍','Lost Pets','Announce your lost friend, find them together with the community.'],
+      ['🤖','AI Assistant','Health, nutrition, behavior — AI answers every question.'],
+      ['💬','Chat & Call','Connect with other pet lovers via voice and video calls.']
+    ]
+  }
+};
+function renderFeats(lang){
+  document.getElementById('featGrid').innerHTML = T[lang].feats.map(f=>
+    `<div class="feat"><div class="ico">${f[0]}</div><h3>${f[1]}</h3><p>${f[2]}</p></div>`).join('');
+}
+function setLang(lang){
+  const t = T[lang];
+  document.getElementById('htmlRoot').lang = lang;
+  document.getElementById('nFeatures').textContent = t.features;
+  document.getElementById('nPrivacy').textContent = t.privacy;
+  document.getElementById('nDownload').textContent = t.download;
+  document.getElementById('hBadge').textContent = t.badge;
+  document.getElementById('hTitle').innerHTML = t.title;
+  document.getElementById('hDesc').textContent = t.desc;
+  document.getElementById('s1').textContent = t.dl;
+  document.getElementById('s2').textContent = t.dl;
+  document.getElementById('pMatch').textContent = t.match;
+  document.getElementById('pMatchSub').textContent = t.matchSub;
+  document.getElementById('fTitle').textContent = t.fTitle;
+  document.getElementById('fSub').textContent = t.fSub;
+  document.getElementById('ctaTitle').textContent = t.ctaTitle;
+  document.getElementById('ctaSub').textContent = t.ctaSub;
+  document.getElementById('fDesc').textContent = t.fDesc;
+  document.getElementById('fcApp').textContent = t.fcApp;
+  document.getElementById('fcFeatures').textContent = t.features;
+  document.getElementById('fcDownload').textContent = t.dl;
+  document.getElementById('fcLegal').textContent = t.fcLegal;
+  document.getElementById('fcContact').textContent = t.fcContact;
+  document.getElementById('fcRights').textContent = t.fcRights;
+  renderFeats(lang);
+  document.getElementById('btnTr').classList.toggle('active', lang==='tr');
+  document.getElementById('btnEn').classList.toggle('active', lang==='en');
+}
+renderFeats('tr');
+</script>
+</body>
+</html>

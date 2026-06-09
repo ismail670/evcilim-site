@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kullanım Şartları — Evcilim</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:#FAFAFA; color:#1A1A1A; line-height:1.7; padding:0 0 60px; }
+  .header { background:linear-gradient(135deg,#FF6B9D,#8B5CF6); color:#fff;
+    padding:48px 24px 56px; text-align:center; position:relative; }
+  .lang-switch { position:absolute; top:16px; right:16px; display:flex; gap:4px;
+    background:rgba(255,255,255,0.2); border-radius:10px; padding:4px; }
+  .lang-switch button { border:none; background:transparent; color:#fff; font-weight:700;
+    font-size:13px; padding:6px 12px; border-radius:7px; cursor:pointer; }
+  .lang-switch button.active { background:#fff; color:#8B5CF6; }
+  .header .emoji { font-size:48px; margin-bottom:12px; }
+  .header h1 { font-size:28px; font-weight:800; margin-bottom:8px; }
+  .header p { font-size:15px; opacity:0.95; max-width:600px; margin:0 auto; }
+  .header .updated { font-size:12px; opacity:0.8; margin-top:12px; }
+  .nav { display:flex; gap:12px; justify-content:center; margin:16px auto 32px;
+    max-width:760px; padding:0 24px; }
+  .nav a { flex:1; text-align:center; padding:14px; border-radius:12px; background:#fff;
+    color:#8B5CF6; text-decoration:none; font-weight:700; font-size:13px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08); border:2px solid transparent; }
+  .nav a.active { border-color:#8B5CF6; }
+  .container { max-width:760px; margin:0 auto; padding:8px 24px; }
+  section { background:#fff; border-radius:16px; padding:24px; margin-bottom:16px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+  section h2 { font-size:19px; font-weight:800; color:#8B5CF6; margin-bottom:14px; }
+  section p { margin-bottom:12px; color:#3A3A3A; font-size:15px; }
+  section ul { margin:8px 0 8px 8px; list-style:none; }
+  section li { padding:7px 0 7px 26px; position:relative; color:#3A3A3A; font-size:14.5px; }
+  section li::before { content:"✓"; position:absolute; left:0; color:#22C55E; font-weight:900; }
+  .footer { text-align:center; padding:32px 24px; color:#888; font-size:13px; }
+  .footer a { color:#8B5CF6; text-decoration:none; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="lang-switch">
+      <button id="btnTr" class="active" onclick="setLang('tr')">TR</button>
+      <button id="btnEn" onclick="setLang('en')">EN</button>
+    </div>
+    <div class="emoji">📋</div>
+    <h1 id="docTitle">Kullanım Şartları</h1>
+    <p id="docSubtitle">Evcilim platformunu kullanırken uyman gereken kurallar ve sorumluluklar</p>
+    <div class="updated"><span id="updatedLabel">Son güncelleme</span>: <span id="docUpdated">15 Ocak 2026</span></div>
+  </div>
+  <div class="nav">
+    <a href="index.html" id="navHome">🏠 Ana Sayfa</a>
+    <a href="privacy.html" id="navPrivacy" class="">🔐 Gizlilik</a>
+    <a href="terms.html" id="navTerms" class="active">📋 Koşullar</a>
+  </div>
+  <div class="container" id="content"><section><h2>Hesap Oluşturma Şartları</h2><p>Evcilim&#x27;i kullanmak için aşağıdaki şartları kabul ettiğin varsayılır:</p><ul><li>18 yaşında veya daha büyüksün</li><li>Yasal olarak sözleşme yapma ehliyetine sahipsin</li><li>Sağladığın bilgiler doğru, güncel ve tamdır</li><li>Yalnızca BİR aktif hesabın olabilir</li><li>Hesap güvenliğinden (şifre, OTP) sen sorumlusun</li><li>Türkiye veya Azerbaycan&#x27;da yaşıyorsun (uygulama bu pazarlara özel)</li></ul></section><section><h2>Yasaklı Davranışlar</h2><p>Evcilim platformunda KESİNLİKLE yasak olan davranışlar:</p><ul><li>Sahte profil oluşturmak veya başkasının kimliğine bürünmek</li><li>Hayvan TİCARETİ yapmak (Evcilim sahiplendirme + arkadaşlık platformudur, satış değil)</li><li>Hakaret, tehdit, taciz, nefret söylemi, ayrımcılık</li><li>Cinsel içerik (insan veya hayvan) paylaşımı</li><li>Spam, reklamcılık, çoklu istek bombardımanı</li><li>Başka kullanıcıların hesabına izinsiz erişim girişimi</li><li>Hayvanlara zarar veren içerik (kavga, dövüş, işkence)</li><li>Yasadışı faaliyetlerin tanıtımı veya organize edilmesi</li><li>Uygulamanın güvenlik açıklarını sömürmek</li><li>Bot, scraper veya otomatik araç kullanımı</li></ul></section><section><h2>Uygunsuz İçeriğe Sıfır Tolerans</h2><p>Evcilim, uygunsuz içeriğe ve kötüye kullanan kullanıcılara karşı SIFIR TOLERANS politikası uygular. Kullanıcılar tarafından oluşturulan içerikten (mesaj, ilan, profil, fotoğraf) doğan sorumluluk içeriği oluşturana aittir.</p><p>Uygunsuz içerik bildirimleri 24 saat içinde incelenir. İhlal tespit edilirse içerik derhal kaldırılır ve içeriği oluşturan kullanıcı uyarılır, askıya alınır veya kalıcı olarak yasaklanır. Bu süreç otomatik filtreler ve manuel moderasyon ile yürütülür.</p><p>Her kullanıcı, rahatsız edici içeriği RAPOR ET butonuyla bildirebilir ve istenmeyen kullanıcıları ENGELLE özelliğiyle engelleyebilir. Engellenen kullanıcı seninle iletişim kuramaz.</p><ul><li>Uygunsuz içerik: Taciz, nefret söylemi, cinsel içerik, şiddet, dolandırıcılık, spam</li><li>Rapor: Profil/mesaj/ilan üzerindeki RAPOR ET → 24 saat içinde inceleme</li><li>Engelle: Profil üzerinden ENGELLE → anında iletişim kesilir</li><li>Yaptırım: İçerik kaldırma + uyarı/askıya alma/kalıcı yasak</li><li>Tekrarlanan veya ciddi ihlaller doğrudan kalıcı yasakla sonuçlanır</li></ul></section><section><h2>Sahiplendirme İlanı Kuralları</h2><p>Sahiplendirme ilanları için özel kurallar:</p><ul><li>İlan içindeki tüm bilgiler GERÇEK ve güncel olmalıdır</li><li>Hayvan fotoğrafları gerçekten o hayvana ait olmalıdır (stok foto yasak)</li><li>Sahiplendirme ücretsizdir — para talep edilemez (&quot;aşı/mama parası&quot; bahanesi dahil)</li><li>Hayvanın sağlık durumu, davranışları ve özel ihtiyaçları belirtilmelidir</li><li>Aynı hayvan için birden fazla ilan açılamaz</li><li>İlan kapanana kadar düzenli güncellenmesi tavsiye edilir</li><li>Diğer kullanıcılar tarafından raporlanan ilanlar incelenir, gerekirse kaldırılır</li></ul></section><section><h2>Eşleşme Sistemi Kuralları</h2><p>AI destekli eşleştirme sisteminde:</p><ul><li>Eşleşme önerileri yalnızca rehber niteliğindedir, garanti değildir</li><li>Çiftleşme amaçlı eşleşme yalnızca aynı tür ve uygun yaşta hayvanlar için yapılır</li><li>Kısırlaştırılmış hayvanlar otomatik olarak çiftleşme havuzundan çıkarılır</li><li>Mesaj başlatma ve günlük etkileşim limitleri planına göre değişir (Free / Plus / Pro)</li><li>AI önerilerine itiraz &quot;Geri Bildirim&quot; sayfasından bildirilebilir</li></ul></section><section><h2>Sorumluluk Sınırlandırması</h2><p>Evcilim, kullanıcılar arası anlaşmazlıklarda taraf değildir:</p><ul><li>Sahiplendirme süreci tamamen kullanıcılar arasında geçer</li><li>Verilen sözlerin yerine getirilmesinden Evcilim sorumlu değildir</li><li>İlan içeriklerinin doğruluğu garanti edilmez</li><li>Buluşma/karşılaşma güvenliği kullanıcı sorumluluğundadır (umumi alanlar tavsiye edilir)</li><li>Hayvan sağlığı ile ilgili konularda profesyonel veteriner desteği alınmalıdır</li></ul></section><section><h2>Fikri Mülkiyet</h2><p>Evcilim uygulamasının kendisi ve tüm orijinal içeriği (logo, tasarım, kod, ikonlar) Evcilim&#x27;e aittir.</p><p>Yüklediğiniz içeriklerin (foto, metin) telif hakkı size aittir, ancak Evcilim&#x27;e bunları platform üzerinde gösterme ve depolama lisansı vermiş olursunuz.</p><p>Başkalarının telif haklarını ihlal eden içerikler kaldırılır ve hesap askıya alınabilir.</p></section><section><h2>Hesap Askıya Alma &amp; Sonlandırma</h2><p>Aşağıdaki durumlarda hesabınız askıya alınabilir veya silinebilir:</p><ul><li>Kullanım kurallarının ihlali</li><li>Sahte ilan veya bilgi tespit edilmesi</li><li>Diğer kullanıcılardan tekrarlanan şikayetler</li><li>Hayvan refahını tehdit eden davranışlar</li><li>90 gün boyunca hiç giriş yapılmaması (uyarı sonrası arşivleme)</li><li>Mahkeme kararı veya yasal zorunluluk</li><li>Premium ödeme dolandırıcılığı veya geri çekme (chargeback)</li></ul></section><section><h2>Değişiklikler</h2><p>Bu kullanım şartları zaman zaman güncellenebilir. Önemli değişiklikler için uygulama içi bildirim ve e-posta ile haberdar edilirsiniz.</p><p>Güncellemelerden sonra Evcilim&#x27;i kullanmaya devam etmeniz, yeni şartları kabul ettiğiniz anlamına gelir.</p><p>Soruların için: destek@evcilim.com</p></section></div>
+  <div class="footer">
+    <p id="footerText">Evcilim — Türkiye & Azerbaycan Evcil Hayvan Platformu</p>
+    <p style="margin-top:8px;"><span id="contactLabel">İletişim</span>: <a href="mailto:destek@evcilim.app">destek@evcilim.app</a></p>
+  </div>
+
+<script>
+const DATA = {
+  tr: {
+    title: "Kullanım Şartları",
+    subtitle: "Evcilim platformunu kullanırken uyman gereken kurallar ve sorumluluklar",
+    updated: "15 Ocak 2026",
+    sections: [{"title": "Hesap Oluşturma Şartları", "paragraphs": ["Evcilim'i kullanmak için aşağıdaki şartları kabul ettiğin varsayılır:"], "bullets": ["18 yaşında veya daha büyüksün", "Yasal olarak sözleşme yapma ehliyetine sahipsin", "Sağladığın bilgiler doğru, güncel ve tamdır", "Yalnızca BİR aktif hesabın olabilir", "Hesap güvenliğinden (şifre, OTP) sen sorumlusun", "Türkiye veya Azerbaycan'da yaşıyorsun (uygulama bu pazarlara özel)"]}, {"title": "Yasaklı Davranışlar", "paragraphs": ["Evcilim platformunda KESİNLİKLE yasak olan davranışlar:"], "bullets": ["Sahte profil oluşturmak veya başkasının kimliğine bürünmek", "Hayvan TİCARETİ yapmak (Evcilim sahiplendirme + arkadaşlık platformudur, satış değil)", "Hakaret, tehdit, taciz, nefret söylemi, ayrımcılık", "Cinsel içerik (insan veya hayvan) paylaşımı", "Spam, reklamcılık, çoklu istek bombardımanı", "Başka kullanıcıların hesabına izinsiz erişim girişimi", "Hayvanlara zarar veren içerik (kavga, dövüş, işkence)", "Yasadışı faaliyetlerin tanıtımı veya organize edilmesi", "Uygulamanın güvenlik açıklarını sömürmek", "Bot, scraper veya otomatik araç kullanımı"]}, {"title": "Uygunsuz İçeriğe Sıfır Tolerans", "paragraphs": ["Evcilim, uygunsuz içeriğe ve kötüye kullanan kullanıcılara karşı SIFIR TOLERANS politikası uygular. Kullanıcılar tarafından oluşturulan içerikten (mesaj, ilan, profil, fotoğraf) doğan sorumluluk içeriği oluşturana aittir.", "Uygunsuz içerik bildirimleri 24 saat içinde incelenir. İhlal tespit edilirse içerik derhal kaldırılır ve içeriği oluşturan kullanıcı uyarılır, askıya alınır veya kalıcı olarak yasaklanır. Bu süreç otomatik filtreler ve manuel moderasyon ile yürütülür.", "Her kullanıcı, rahatsız edici içeriği RAPOR ET butonuyla bildirebilir ve istenmeyen kullanıcıları ENGELLE özelliğiyle engelleyebilir. Engellenen kullanıcı seninle iletişim kuramaz."], "bullets": ["Uygunsuz içerik: Taciz, nefret söylemi, cinsel içerik, şiddet, dolandırıcılık, spam", "Rapor: Profil/mesaj/ilan üzerindeki RAPOR ET → 24 saat içinde inceleme", "Engelle: Profil üzerinden ENGELLE → anında iletişim kesilir", "Yaptırım: İçerik kaldırma + uyarı/askıya alma/kalıcı yasak", "Tekrarlanan veya ciddi ihlaller doğrudan kalıcı yasakla sonuçlanır"]}, {"title": "Sahiplendirme İlanı Kuralları", "paragraphs": ["Sahiplendirme ilanları için özel kurallar:"], "bullets": ["İlan içindeki tüm bilgiler GERÇEK ve güncel olmalıdır", "Hayvan fotoğrafları gerçekten o hayvana ait olmalıdır (stok foto yasak)", "Sahiplendirme ücretsizdir — para talep edilemez (\"aşı/mama parası\" bahanesi dahil)", "Hayvanın sağlık durumu, davranışları ve özel ihtiyaçları belirtilmelidir", "Aynı hayvan için birden fazla ilan açılamaz", "İlan kapanana kadar düzenli güncellenmesi tavsiye edilir", "Diğer kullanıcılar tarafından raporlanan ilanlar incelenir, gerekirse kaldırılır"]}, {"title": "Eşleşme Sistemi Kuralları", "paragraphs": ["AI destekli eşleştirme sisteminde:"], "bullets": ["Eşleşme önerileri yalnızca rehber niteliğindedir, garanti değildir", "Çiftleşme amaçlı eşleşme yalnızca aynı tür ve uygun yaşta hayvanlar için yapılır", "Kısırlaştırılmış hayvanlar otomatik olarak çiftleşme havuzundan çıkarılır", "Mesaj başlatma ve günlük etkileşim limitleri planına göre değişir (Free / Plus / Pro)", "AI önerilerine itiraz \"Geri Bildirim\" sayfasından bildirilebilir"]}, {"title": "Sorumluluk Sınırlandırması", "paragraphs": ["Evcilim, kullanıcılar arası anlaşmazlıklarda taraf değildir:"], "bullets": ["Sahiplendirme süreci tamamen kullanıcılar arasında geçer", "Verilen sözlerin yerine getirilmesinden Evcilim sorumlu değildir", "İlan içeriklerinin doğruluğu garanti edilmez", "Buluşma/karşılaşma güvenliği kullanıcı sorumluluğundadır (umumi alanlar tavsiye edilir)", "Hayvan sağlığı ile ilgili konularda profesyonel veteriner desteği alınmalıdır"]}, {"title": "Fikri Mülkiyet", "paragraphs": ["Evcilim uygulamasının kendisi ve tüm orijinal içeriği (logo, tasarım, kod, ikonlar) Evcilim'e aittir.", "Yüklediğiniz içeriklerin (foto, metin) telif hakkı size aittir, ancak Evcilim'e bunları platform üzerinde gösterme ve depolama lisansı vermiş olursunuz.", "Başkalarının telif haklarını ihlal eden içerikler kaldırılır ve hesap askıya alınabilir."], "bullets": []}, {"title": "Hesap Askıya Alma & Sonlandırma", "paragraphs": ["Aşağıdaki durumlarda hesabınız askıya alınabilir veya silinebilir:"], "bullets": ["Kullanım kurallarının ihlali", "Sahte ilan veya bilgi tespit edilmesi", "Diğer kullanıcılardan tekrarlanan şikayetler", "Hayvan refahını tehdit eden davranışlar", "90 gün boyunca hiç giriş yapılmaması (uyarı sonrası arşivleme)", "Mahkeme kararı veya yasal zorunluluk", "Premium ödeme dolandırıcılığı veya geri çekme (chargeback)"]}, {"title": "Değişiklikler", "paragraphs": ["Bu kullanım şartları zaman zaman güncellenebilir. Önemli değişiklikler için uygulama içi bildirim ve e-posta ile haberdar edilirsiniz.", "Güncellemelerden sonra Evcilim'i kullanmaya devam etmeniz, yeni şartları kabul ettiğiniz anlamına gelir.", "Soruların için: destek@evcilim.com"], "bullets": []}],
+    ui: {"home": "🏠 Ana Sayfa", "privacy": "🔐 Gizlilik", "terms": "📋 Koşullar", "updated": "Son güncelleme", "contact": "İletişim", "footer": "Türkiye & Azerbaycan Evcil Hayvan Platformu"}
+  },
+  en: {
+    title: "Terms of Use",
+    subtitle: "The rules and conditions for using the Evcilim platform",
+    updated: "January 15, 2026",
+    sections: [{"title": "Account Creation Terms", "paragraphs": ["By using Evcilim, you are deemed to accept the following terms:"], "bullets": ["You are 18 years of age or older", "You are legally competent to enter into a contract", "The information you provide is accurate, current and complete", "You may have only ONE active account", "You are responsible for your account security (password, OTP)", "You reside in Turkey or Azerbaijan (the app is specific to these markets)"]}, {"title": "Prohibited Conduct", "paragraphs": ["Conduct that is STRICTLY prohibited on the Evcilim platform:"], "bullets": ["Creating fake profiles or impersonating others", "Animal TRADING (Evcilim is an adoption + companionship platform, not for sales)", "Insults, threats, harassment, hate speech, discrimination", "Sharing sexual content (human or animal)", "Spam, advertising, mass request bombing", "Attempting unauthorized access to other users’ accounts", "Content that harms animals (fighting, abuse, torture)", "Promoting or organizing illegal activities", "Exploiting security vulnerabilities of the app", "Using bots, scrapers or automated tools"]}, {"title": "Zero Tolerance for Objectionable Content", "paragraphs": ["Evcilim enforces a ZERO TOLERANCE policy toward objectionable content and abusive users. Responsibility for user-generated content (messages, listings, profiles, photos) lies with the person who created it.", "Reports of objectionable content are reviewed within 24 hours. If a violation is found, the content is immediately removed and the user who created it is warned, suspended, or permanently banned. This process is carried out through automated filters and manual moderation.", "Every user can report offensive content using the REPORT button and block unwanted users with the BLOCK feature. A blocked user cannot contact you."], "bullets": ["Objectionable content: Harassment, hate speech, sexual content, violence, fraud, spam", "Report: REPORT button on profile/message/listing → review within 24 hours", "Block: BLOCK on profile → contact is cut immediately", "Action: Content removal + warning/suspension/permanent ban", "Repeated or serious violations result directly in a permanent ban"]}, {"title": "Adoption Listing Rules", "paragraphs": ["Special rules for adoption listings:"], "bullets": ["All information in a listing must be REAL and current", "Pet photos must genuinely belong to that animal (stock photos prohibited)", "Adoption is free — no money may be requested (including \"vaccine/food fee\" excuses)", "The animal’s health, behavior and special needs must be stated", "Multiple listings cannot be created for the same animal", "Regular updates until the listing closes are recommended", "Listings reported by other users are reviewed and removed if necessary"]}, {"title": "Matching System Rules", "paragraphs": ["In the AI-powered matching system:"], "bullets": ["Match suggestions are guidance only, not guarantees", "Mating matches are only made for animals of the same species and appropriate age", "Neutered animals are automatically excluded from the mating pool", "Message initiation and daily interaction limits vary by plan (Free / Plus / Pro)", "Objections to AI suggestions can be reported from the \"Feedback\" page"]}, {"title": "Limitation of Liability", "paragraphs": ["Evcilim is not a party to disputes between users:"], "bullets": ["The adoption process takes place entirely between users", "Evcilim is not responsible for fulfilling promises made", "The accuracy of listing content is not guaranteed", "Meeting/encounter safety is the user’s responsibility (public places recommended)", "Professional veterinary support should be sought for animal health matters"]}, {"title": "Intellectual Property", "paragraphs": ["The Evcilim app itself and all original content (logo, design, code, icons) belong to Evcilim.", "You retain copyright of content you upload (photos, text), but grant Evcilim a license to display and store it on the platform.", "Content that infringes others’ copyrights is removed and the account may be suspended."], "bullets": []}, {"title": "Account Suspension & Termination", "paragraphs": ["Your account may be suspended or deleted in the following cases:"], "bullets": ["Violation of usage rules", "Detection of fake listings or information", "Repeated complaints from other users", "Conduct that threatens animal welfare", "No login for 90 days (archiving after warning)", "Court order or legal obligation", "Premium payment fraud or chargeback"]}, {"title": "Changes", "paragraphs": ["These terms of use may be updated from time to time. You will be informed of significant changes via in-app notification and email.", "Continuing to use Evcilim after updates means you accept the new terms.", "For questions: destek@evcilim.com"], "bullets": []}],
+    ui: {"home": "🏠 Home", "privacy": "🔐 Privacy", "terms": "📋 Terms", "updated": "Last updated", "contact": "Contact", "footer": "Turkey & Azerbaijan Pet Platform"}
+  }
+};
+const DOC_KEY = "terms";
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+function renderSections(secs){
+  return secs.map(s=>{
+    const paras = s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('');
+    const bullets = s.bullets && s.bullets.length ? `<ul>${s.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>` : '';
+    return `<section><h2>${esc(s.title)}</h2>${paras}${bullets}</section>`;
+  }).join('');
+}
+function setLang(lang){
+  const d = DATA[lang];
+  document.getElementById('htmlRoot').lang = lang;
+  document.getElementById('docTitle').textContent = d.title;
+  document.getElementById('docSubtitle').textContent = d.subtitle;
+  document.getElementById('updatedLabel').textContent = d.ui.updated;
+  document.getElementById('docUpdated').textContent = d.updated;
+  document.getElementById('navHome').textContent = d.ui.home;
+  document.getElementById('navPrivacy').textContent = d.ui.privacy;
+  document.getElementById('navTerms').textContent = d.ui.terms;
+  document.getElementById('content').innerHTML = renderSections(d.sections);
+  document.getElementById('footerText').textContent = 'Evcilim — ' + d.ui.footer;
+  document.getElementById('contactLabel').textContent = d.ui.contact;
+  document.getElementById('btnTr').classList.toggle('active', lang==='tr');
+  document.getElementById('btnEn').classList.toggle('active', lang==='en');
+}
+</script>
+</body>
+</html>
